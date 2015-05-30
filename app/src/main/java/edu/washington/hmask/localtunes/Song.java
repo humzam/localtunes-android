@@ -2,23 +2,31 @@ package edu.washington.hmask.localtunes;
 
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by huntermask on 5/30/15.
  */
 public class Song {
-    private User user;
+    @SerializedName("user")
+    private String userId;
+
     private String artist;
+
     private String album;
+
     private String title;
+
+    @SerializedName("album_art_url")
     private String albumArtUrl;
 
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String userId) {
+        this.userId = userId;
     }
 
     public String getArtist() {
